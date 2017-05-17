@@ -1,0 +1,351 @@
+/*Gives parameters for the whole site*/
+body{
+	background-color: black;
+	padding: 2px;
+	margin: 0px;
+	border: 5px solid gray;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	color: white;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.8em;
+}
+
+body div{
+	display: block;
+	overflow: auto;
+}
+
+body::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body a{
+	text-decoration: none;
+}
+
+/*Describes the layout for the top of the screen*/
+.page-head {
+	z-index: 100;
+	text-align: center;
+	font-size: 1.8em;
+	background-color: black;
+	padding-bottom: 5px;
+}
+
+.page-head #main-links{
+	padding: 0px;
+	width: 752px;
+	border-left: 2px solid gray;
+	border-bottom: 2px solid gray;
+	border-top: 2px solid gray;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+}
+.page-head li{
+	z-index: 100;
+	display: inline-block;
+	width: 186px;
+	border-right: 2px solid gray;
+}
+
+/*sets the current page to be different than the other links*/
+#here{
+	background-color: gray;
+	color: white;
+}
+
+/*Gives the properties of the clickable links on the header*/
+.page-head a{
+	display: inline-block;
+	width: 186px;
+	text-decoration: none;
+	border-bottom: 0px;
+}
+
+/*Controls what happens when a link is hovered over*/
+li:hover{
+	background-color: gray;
+}
+
+a:hover{
+	color: white;
+}
+
+/*Creates a dropdown menu*/
+.page-head li:hover .dropdown{
+	visibility: visible;
+	position:absolute;
+	z-index: 100;
+}
+
+.dropdown{
+	border-top: 2px solid gray;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+}
+
+.dropdown li{
+	border: 2px solid gray;
+	border-top: 0px;
+	margin-left: -42px;
+	display: block;
+	background: black;
+}
+
+.dropdown li:hover{
+		background: gray;
+}
+
+/*Sets the main body of the page up*/
+.main{
+	border: 2px solid gray;
+	width: 550px;
+	display: inline-block;
+}
+
+.main .bodp{
+	padding: 5px;
+	background: gray;
+}
+
+.main .errMsg{
+	text-align:center;
+	color: gray;
+}
+
+.main h2{
+	margin-left: 5px;
+	overflow: auto;
+	border-bottom: 3px solid white;
+	margin-bottom: 0px;
+}
+
+.main h1{
+	text-align: center;
+	border-bottom: 5px solid white;
+	margin-bottom:0px;
+}
+
+/*Creates a style for a post element*/
+.post{
+	overflow: auto;
+	background-color: gray;
+	height: 200px;
+	margin: 5px;
+}
+
+.post h2{
+	border-bottom: 3px solid white;
+	overflow: auto;
+	margin-left: 10px;
+	text-align: left;
+}
+
+.post p{
+	overflow: auto;
+}
+
+.post img{
+	display: block;
+	background: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 180px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+/*Sets up the display of a photo slider*/
+#selector{
+	margin-left: 5px;
+	margin-top: 5px;
+	float: left;
+	background-color: gray;
+}
+
+/*creates a box for the image*/
+#selector .primeImg{
+	height: 300px;
+	width: 300px;
+	position: relative;
+}
+
+/*centers the image*/
+#selector .primeImg img{
+	display: block;
+	max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
+.thumbs{
+	display: block;
+	background: white;
+	height: 80px;
+	width: 100%;
+}
+
+.thumbs img{
+	display: inline-block;
+	background-color: white;
+	margin-top: 5px;
+	height: 70px;
+	margin-left: 5%;
+}
+
+.thumbs a:hover{
+	opacity: .5;
+	filter: alpha(opacity = 50);
+}
+
+.thumbs .active{
+	opacity: .5;
+	filter: alpha(opacity = 50);
+}
+
+/*Style for the sidebar of the site*/
+.side-menu{
+	border: 2px solid gray;
+	width: 240px;
+	height: 300px;
+	float: right;
+	background-color: gray;
+}
+
+.side-menu h2{
+	width: 215px;
+	height: 50px;
+	margin: auto;
+	margin-top: 15px;
+	text-align: center;
+	background: white;
+	color: gray;
+	line-height: 50px;
+}
+
+/*Creates style for a slider*/
+.slide-view{
+	z-index: 0;
+	background-color: gray;
+	overflow: hidden;
+	height: 160px;
+	margin: 5px;
+	width: 540px;
+	position:relative;
+	border-radius:10px;
+}
+
+.group{
+	width: 100%;
+	height : 100%;
+	position: relative;
+}
+
+/*Style for individual slides*/
+.slide img{
+	height: 140px;
+	width: 100%;
+}
+
+.slide{
+	width: 30%;
+	display: none;
+	margin-top: 10px;
+	margin-left: 11px;
+}
+
+.current1, .current2, .current3 {
+	display: inline-block;
+}
+
+/*sets style for slider buttons*/
+
+
+.slider button{
+	z-index: 1;
+	height: 160px;
+	margin-top: -165px;
+	margin-bottom: -165px;
+	background-color:black;
+	width: 50px;
+	opacity: .3;
+	filter: alpha(opacity = 30);
+	border:none;
+	position: absolute;
+}
+
+.slide-btnL{
+	margin-left: 5px;
+
+}
+.slide-btnR{
+	margin-left: 495px;
+
+}
+
+button:hover{
+	border: 0px;
+	opacity: .5;
+	filter: alpha(opacity = 50);
+}
+
+/*Here is the code for our accordion on the about page*/
+
+.accordion{
+	margin: 5px;
+	background-color: gray;
+	text-align: center;
+}
+
+.accordion {
+    list-style-type: none;
+	width: 95%;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom:5px;
+    padding: 0;
+}
+
+.accordion button{
+	background-color: black;
+	color: white;
+	float: center;
+	width: 100%;
+}
+
+.accordion-panel{
+	display: none;
+	background-color: gray;
+}
+
+.accordion .open{
+	display:block;
+}
+
+.accordion-panel img{
+	max-height: 300px;
+	max-width: 500px;
+}
+
+
+
+
+
+
